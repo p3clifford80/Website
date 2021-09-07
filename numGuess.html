@@ -1,0 +1,37 @@
+<html>
+<head>
+<script language = "javaScript">
+function start()
+{
+	var rand = Math.random()*10+1;
+	rand = parseInt(rand);
+	alert(rand);
+	
+	var userGuess = -1; 
+	var guessCount = 0;
+
+	
+	while ( rand != userGuess )
+	{
+		guessCount = guessCount + 1;
+		userGuess = prompt("Enter a number between 1 - 10: ");
+		if(userGuess > rand)
+		{
+			alert("Guess is too high.");
+		}
+		else if( userGuess < rand)
+		{
+			alert("Guess is too low.");
+		}
+	}
+	
+	alert("Correct! You got the right answer in "+guessCount+" guesses.");
+	
+}
+
+</script>
+</head>
+<body>
+
+<input type = "button" value="Click me" onclick="start()"/>
+</html>
